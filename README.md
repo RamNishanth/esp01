@@ -45,6 +45,7 @@ ESP8266 WiFi Module can be programmed using Arduino IDE and in order to do that 
 
 Now, go to Tools –> Board –> Boards Manager and search for ESP8266 in the search field. Select the ESP8266 by ESP8266 Community and click on Install. 
 
+![image](https://user-images.githubusercontent.com/48613162/54474051-ff7e1480-4805-11e9-8059-317a29dcb6d8.png)
 
                
 #                                        Getting Arduino UNO Ready for Programming ESP8266
