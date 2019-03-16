@@ -32,3 +32,28 @@ Finally CH_PD goes to the red line, supposedly it will not work if you do not co
     GPIO0: The GPIO0 (General Purpose I/O) Pin has dual functions – one for normal GPIO Operation and other for enabling the Programming     Mode of ESP8266.
     GPIO2: This is GPIO Pin.
 IMPORTANT NOTE: The ESP8266 is not compatible with 5V and the ESP-01 Module does not have any voltage regulators on-board. Make sure that the power supply to the ESP8266 is 3.3V, preferably from a dedicated power supply rather than taking it from the 3.3V Pin of the Arduino.
+  #  CIRCUIT DIAGRAM
+  ![image](https://user-images.githubusercontent.com/48613162/54473880-b927b600-4803-11e9-9f2b-57999c40f4e2.png)
+  #                                Getting Arduino IDE Ready for Programming ESP8266
+
+ESP8266 WiFi Module can be programmed using Arduino IDE and in order to do that you need to make a few changes to the Arduino IDE. First, go to File –> Preferences in the Arduino IDE and in the Additional Boards Manager URLs Section, enter the following URL.
+                            
+                            http://arduino.esp8266.com/stable/package_esp8266com_index.json
+                            
+ NOTE: You can add many such URLs but they must be separated with commas.
+
+Now, go to Tools –> Board –> Boards Manager and search for ESP8266 in the search field. Select the ESP8266 by ESP8266 Community and click on Install.          
+
+
+                            
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
