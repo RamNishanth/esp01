@@ -60,6 +60,10 @@ Now, go to Tools –> Board –> Boards Manager and search for ESP8266 in the se
 ![image](https://user-images.githubusercontent.com/48613162/54474063-2b999580-4806-11e9-84a8-ec5297e5578d.png)
 
 
+![image](https://user-images.githubusercontent.com/48613162/54474227-6bfa1300-4808-11e9-921b-f5939684780f.png)
+
+
+
 #                                        Getting Arduino UNO Ready for Programming ESP8266
 In order to Program ESP8266 Module, we need to connect it to a computer. Since Serial Communication is the only available communication on the ESP8266 ESP-01 Module, we need an USB to Serial Adapter like an FTDI, CH340 or FT232RL.
 
