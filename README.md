@@ -39,12 +39,50 @@ IMPORTANT NOTE: The ESP8266 is not compatible with 5V and the ESP-01 Module does
 ESP8266 WiFi Module can be programmed using Arduino IDE and in order to do that you need to make a few changes to the Arduino IDE. First, go to File –> Preferences in the Arduino IDE and in the Additional Boards Manager URLs Section, enter the following URL.
                             
                             http://arduino.esp8266.com/stable/package_esp8266com_index.json
+                ![image](https://user-images.githubusercontent.com/48613162/54473902-1ae82000-4804-11e9-9f51-feb487bfc825.png)
                             
  NOTE: You can add many such URLs but they must be separated with commas.
 
 Now, go to Tools –> Board –> Boards Manager and search for ESP8266 in the search field. Select the ESP8266 by ESP8266 Community and click on Install.          
 
+               ![image](https://user-images.githubusercontent.com/48613162/54473906-250a1e80-4804-11e9-8b2e-618bcd285961.png)
+#                                        Getting Arduino UNO Ready for Programming ESP8266
+In order to Program ESP8266 Module, we need to connect it to a computer. Since Serial Communication is the only available communication on the ESP8266 ESP-01 Module, we need an USB to Serial Adapter like an FTDI, CH340 or FT232RL.
 
+If you do not have a dedicated USB to Serial Adapter, do not worry. The Arduino UNO has an on-board USB to Serial Adapter (which is used to program the Arduino). We are going to use this for programming the ESP8266.
+
+We will be using the TX and RX Pins of the Arduino to connect to the ESP8266 Module and in order to make sure that Arduino isn’t using those pins, we can upload a bare minimum sketch to Arduino.
+
+NOTE: Bare minimum sketch consists of just the setup and loop functions without any data in them.
+
+In my case, I have an extra Arduino UNO Board with a non-functioning ATmega328p IC. So, I removed the Microcontroller IC from the Arduino UNO and started using it as an USB to Serial Converter.  
+Circuit Design for Programming ESP8266 using Arduino
+You have already seen the required components and the circuit diagram of the project. Now, let us try to understand the design of the circuit.
+
+First and foremost, the ESP8266 Module works on 3.3V Power Supply and anything greater than that, like 5V for example, will kill the SoC. So, the VCC Pin and CH_PD Pin of ESP8266 ESP-01 Module are connected to a 3.3V Supply.
+
+Next important thing to remember is that the ESP8266 WiFi Module has two modes of operation: Programming Mode and Normal Mode.
+
+**In Programming Mode, you can upload the program or firmware to the ESP8266 Module and in Normal Mode, the uploaded program or firmware will run normally.**
+
+**In order to enable the Programming Mode, the GPIO0 pin must be connected to GND. In the circuit diagram, I’ve connected a SPDT switch to the GPIO0 pin. Toggling the lever of SPDT will switch the ESP8266 between Programming mode (GPIO0 is connected to GND) and normal mode (GPIO0 acts as a GPIO Pin).**   
+
+Also, the RST (Reset) will play an important role in enabling Programming Mode. The RST pin is an active LOW pin and hence, it is connected to GND through a Push Button. So, whenever the button is pressed, the ESP8266 Module will reset.
+
+Finally the GPIO2 pin is connected to an LED to test the working of the program. All the necessary connections for enabling the Programming Mode in ESP8266 are mentioned below.
+                ```
+                    VCC – – > 3.3V
+                    GND – – > GND
+                    CH_PD – – > 3.3V
+                    RST – – > Normally Open; GND to Reset
+                    GPIO0 – – > GND
+                    TX – – > TX of Arduino
+                    RX – – > RX of Arduino (through level converter) ``` 
+
+Working of ESP8266 Arduino Interface
+Make sure that all the above mentioned connections are properly made. After connecting and configuring the ESP8266 in Programming Mode (GPIO0 is connected to GND), connect the Arduino to the system.
+
+Once the ESP8266 Module is powered ON, Push the RST button and open the Arduino IDE. In the Board options (Tools –> Board), select the “Generic ESP8266” Board. Select the appropriate port number in the IDE.
                             
 
   
