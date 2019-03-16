@@ -39,13 +39,14 @@ IMPORTANT NOTE: The ESP8266 is not compatible with 5V and the ESP-01 Module does
 ESP8266 WiFi Module can be programmed using Arduino IDE and in order to do that you need to make a few changes to the Arduino IDE. First, go to File –> Preferences in the Arduino IDE and in the Additional Boards Manager URLs Section, enter the following URL.
                             
                             http://arduino.esp8266.com/stable/package_esp8266com_index.json
-                ![image](https://user-images.githubusercontent.com/48613162/54473902-1ae82000-4804-11e9-9f51-feb487bfc825.png)
+                            
                             
  NOTE: You can add many such URLs but they must be separated with commas.
 
-Now, go to Tools –> Board –> Boards Manager and search for ESP8266 in the search field. Select the ESP8266 by ESP8266 Community and click on Install.          
+Now, go to Tools –> Board –> Boards Manager and search for ESP8266 in the search field. Select the ESP8266 by ESP8266 Community and click on Install. 
 
-               ![image](https://user-images.githubusercontent.com/48613162/54473906-250a1e80-4804-11e9-8b2e-618bcd285961.png)
+
+               
 #                                        Getting Arduino UNO Ready for Programming ESP8266
 In order to Program ESP8266 Module, we need to connect it to a computer. Since Serial Communication is the only available communication on the ESP8266 ESP-01 Module, we need an USB to Serial Adapter like an FTDI, CH340 or FT232RL.
 
@@ -85,7 +86,8 @@ Make sure that all the above mentioned connections are properly made. After conn
 Once the ESP8266 Module is powered ON, Push the RST button and open the Arduino IDE. In the Board options (Tools –> Board), select the “Generic ESP8266” Board. Select the appropriate port number in the IDE.
                             
 
-  
+  ![image](https://user-images.githubusercontent.com/48613162/54473950-bda09e80-4804-11e9-8321-7d5c42a1b41e.png)
+
   
   
   
