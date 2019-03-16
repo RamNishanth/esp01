@@ -20,5 +20,15 @@ The steps you need to take are simple. This is written for the ESP8266-01 but yo
 
 6. Connect the GND pin of the ESP to the blue line and the VCC pin to the red line.
 Finally CH_PD goes to the red line, supposedly it will not work if you do not connect this.
-
-                                
+#          ESP01
+![image](https://user-images.githubusercontent.com/48613162/54473814-e031b800-4802-11e9-88c4-1e0f57c7978b.png)
+#                                    Pin Description of ESP8266 ESP-01 Module
+    VCC: It is the power pin through which 3.3V is supplied.
+    GND: It is the ground pin.
+    TX: This pin is used to transmit serial data to other devices.
+    RX: The RX pin is used to receive serial data from other devices.
+    RST: It is the Reset Pin and it is an active LOW Pin. (ESP8266 will reset if the RST pin receives LOW signal).
+    CH_PD: This is the chip enable pin and it is an active HIGH Pin. It is usually connected to 3.3V.
+    GPIO0: The GPIO0 (General Purpose I/O) Pin has dual functions – one for normal GPIO Operation and other for enabling the Programming     Mode of ESP8266.
+    GPIO2: This is GPIO Pin.
+IMPORTANT NOTE: The ESP8266 is not compatible with 5V and the ESP-01 Module does not have any voltage regulators on-board. Make sure that the power supply to the ESP8266 is 3.3V, preferably from a dedicated power supply rather than taking it from the 3.3V Pin of the Arduino.
