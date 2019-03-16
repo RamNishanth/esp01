@@ -3,14 +3,13 @@
                                 Arduino UNO  
                                 ESP8266 ESP-01 
                                 Connecting Wires 
-                                Bread Board or  DOT board
                                 Push Button
 #                                          Connecting the ESP8266 to an Arduino
 The steps you need to take are simple. This is written for the ESP8266-01 but you can find the pinout for other models easily and use the same pins. First we will connect the Arduino UNO to a breadboard:
 
-1. Connect the Arduino’s 3v3 **(3.3V)**  on a breadboard. The ESP8266 works with 3.3V and not 5V, so this is necessary. If you want to connect other components that use 5V, you can connect the 5V output of the breadboard, just make sure you don’t connect the two.
+1. Connect the Arduino’s 3v3 **(3.3V)**  on a breadboard. The ESP8266 works with 3.3V and not 5V, so this is necessary. If you want to connect other components that use 5V, you can connect the 5V , just make sure you don’t connect the two.
 
-2. Connect GND (ground) to breadboard.
+2. Connect GND (ground) to esp gnd.
 
 3. Connect the RES or RESET pin to ground. When you ground the reset pin, the Arduino works as a dumb USB to serial connector, which is what we want to talk to the ESP8266.
 
