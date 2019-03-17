@@ -1,4 +1,4 @@
-#                                         ARDUINO UNO  WITH GPIO WORKING CONCEPT
+#                                         ARDUINO UNO  WITH ESP01 GPIO WORKING CONCEPT
 # Components
                                 Arduino UNO  
                                 ESP8266 ESP-01 
