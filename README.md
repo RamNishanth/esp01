@@ -4,6 +4,11 @@
                                 ESP8266 ESP-01 
                                 Connecting Wires 
                                 Push Button
+                                
+  ###                  NOTE: DONT CONNECT LOADS ON GPIO , BEFORE FLASH YOUR CODE , OTHERWISE ESP01 WILL NOT WORK
+  
+  ###                 IN PROGRAMMING MODE MAKE GPIO 0 AS GROUND  , OTHERWISE ERROR WILL OCCUR
+  
 #                                          Connecting the ESP8266 to an Arduino
 The steps you need to take are simple. This is written for the ESP8266-01 but you can find the pinout for other models easily and use the same pins. First we will connect the Arduino UNO to a breadboard:
 
@@ -143,9 +148,7 @@ set GPIO pin as output
  
   
   
-  ### NOTE: DONT CONNECT LOADS ON GPIO , BEFORE FLASH YOUR CODE , OTHERWISE ESP01 WILL NOT WORK
   
-  ### IN PROGRAMMING MODE MAKE GPIO 0 AS GROUND  , OTHERWISE ERROR WILL OCCUR
   
   
   
